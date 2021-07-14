@@ -1,5 +1,4 @@
-const hello = name => {
-    console.log(`Hello ${name}`)
-}
+const logger = require('./logger')
 
-hello('Triston')
+
+logger.log('Hello big guy')

@@ -1,4 +1,5 @@
-const logger = require('./logger')
+const os = require('os')
 
+let totalMem = os.totalmem()
 
-logger.log('Hello big guy')
+console.log(totalMem)

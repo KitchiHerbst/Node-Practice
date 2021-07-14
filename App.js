@@ -1,5 +1,16 @@
-const os = require('os')
+const http = require('http')
 
-let totalMem = os.totalmem()
+const server = http.createServer((req, res) => {
+    if (req.url === '/'){
+        res.write('Hello world')
+        res.end()
+    }
+})
 
-console.log(totalMem)
+server.on('connection', (socket) => {
+    console.log('new connection...')
+})
+
+server.listen(3000)
+
+console.log('Listening on Port 3000...')
